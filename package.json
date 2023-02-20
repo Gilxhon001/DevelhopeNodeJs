@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.mjs"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/Gilxhon001/DevelhopeNodeJs/issues"
   },
-  "homepage": "https://github.com/Gilxhon001/DevelhopeNodeJs#readme",
-  "dependencies": {
-    "figlet": "^1.5.2"
-  }
+  "homepage": "https://github.com/Gilxhon001/DevelhopeNodeJs#readme"
 }
