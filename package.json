@@ -1,0 +1,23 @@
+{
+  "name": "develhopenodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gilxhon001/DevelhopeNodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gilxhon001/DevelhopeNodeJs/issues"
+  },
+  "homepage": "https://github.com/Gilxhon001/DevelhopeNodeJs#readme",
+  "dependencies": {
+    "figlet": "^1.5.2"
+  }
+}
