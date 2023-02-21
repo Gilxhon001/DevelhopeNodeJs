@@ -13,11 +13,19 @@ function luckyDraw(player) {
 }
 
 
-luckyDraw("Joe")
-    .then((player) => console.log("Player 1 Result:", player))
-    .then(() => luckyDraw("Caroline "))
-    .then((player2) => console.log("Player 2 Result:", player2))
-    .then(() => luckyDraw("Sabrina"))
-    .then((player3) => console.log("Player 3 Result:", player3))
-    .catch((error) => console.error(error))
+const getResults = async () => {
+    try {
+        const data = await Promise.all([
+            luckyDraw("Tina"),
+            luckyDraw("Jorge"),
+            luckyDraw("Julien")
+        ])
 
+        console.log("Results:", data);
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getResults();
