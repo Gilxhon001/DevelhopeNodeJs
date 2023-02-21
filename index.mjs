@@ -1,25 +1,23 @@
-import * as filehandle from "node:fs";
+function luckyDraw(player) {
+    return new Promise((resolve, reject) => {
+        const win = Boolean(Math.round(Math.random()));
 
-const data = "test.txt";
-
-const content = "WELL HELLO THERE...."
-filehandle.writeFile(data, content, error => {
-    if (error) {
-        console.error(error);
-        return;
-    }
-    console.log(`First string was added in ${data}`);
-
-
-
-    const content2 = "General Kenobi...."
-    filehandle.writeFile(data, `${content} \n${content2}`, error => {
-        if (error) {
-            console.error(error);
-            return;
-        }
-        console.log(`Second string was added in ${data}`);
+        process.nextTick(() => {
+            if (win) {
+                resolve(`${player} won a prize in the draw!`);
+            } else {
+                reject(new Error(`${player} lost the draw.`));
+            }
+        });
     });
+}
 
 
-});
+luckyDraw("Joe")
+    .then((player) => console.log("Player 1 Result:", player))
+    .then(() => luckyDraw("Caroline "))
+    .then((player2) => console.log("Player 2 Result:", player2))
+    .then(() => luckyDraw("Sabrina"))
+    .then((player3) => console.log("Player 3 Result:", player3))
+    .catch((error) => console.error(error))
+
